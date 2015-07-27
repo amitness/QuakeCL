@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-""" This script prints the last 5 earthquake occured in Nepal in your terminal.
+""" This script prints the details of last 5 earthquake occured in Nepal in your terminal.
 """
 
 
