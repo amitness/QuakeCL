@@ -1,6 +1,8 @@
 # QuakeCL
 View the 5 recent **earthquakes** that took place in **Nepal** in your terminal.
 
+![alt tag](https://pbs.twimg.com/media/CK6IBbsVEAADPB8.png:large)
+
 ### INSTALLATION:
 1. Clone the repository to your home folder.
      
