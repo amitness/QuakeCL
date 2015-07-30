@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 """ This script prints the details of last 5 earthquake occured in Nepal in your terminal.
 """
-
+from datetime import datetime
+now=datetime.now()
+print "Today's date: %s/%s/%s" %(now.month,now.day,now.year)
 
 def get_page(url):
     try:
