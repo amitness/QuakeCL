@@ -1,6 +1,7 @@
 #!/usr/bin/env python
-""" This script prints the details of last 5 earthquake occurred in Nepal in your terminal.
-"""
+'''This script prints the details of last 5 earthquake occurred in Nepal
+ in your terminal.
+'''
 from datetime import datetime
 now = datetime.now()
 print "Today's date: %s/%s/%s" % (now.month, now.day, now.year)
@@ -14,6 +15,6 @@ def get_page(url):
         return ''
 
 data = get_page('https://docs.google.com/spreadsheets/u/0/d/1eeIOB58Dn5qRNWTySqrL35U8xY3JjZ7yhg5Dpxvbz8s/export'
-                '?format=csv&id=1eeIOB58Dn5qRNWTySqrL35U8xY3JjZ7yhg5Dpxvbz8s&gid=0')
-print "Recent Earthquakes"
+    '?format=csv&id=1eeIOB58Dn5qRNWTySqrL35U8xY3JjZ7yhg5Dpxvbz8s&gid=0')
+print "Recent Earthquakes:"
 print data[111:-1]
