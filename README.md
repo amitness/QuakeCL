@@ -18,7 +18,8 @@ View the 5 recent **earthquakes** that took place in **Nepal** in your terminal.
 4. Right click, and then in **Permissions** tab, tick *"Allow executing file as program"*. 
 
 ### USAGE:
-    In your terminal, type earthquake and you get the magnitude, time and location of earthquakes.
+    user@user ~ $ earthquake 
+
 
 
 ### Stuff used to make this:
