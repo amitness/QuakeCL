@@ -34,7 +34,7 @@ def create_dictionary(datas):
                        'time': fields[1],
                        'magnitude': fields[4],
                        'location': fields[6]})
-    return sorted(result, key=lambda r: r.get('date'), reverse = True)
+    return sorted(result, key=lambda r: r.get('date'), reverse=True)
 
 
 def main():
@@ -53,7 +53,8 @@ def main():
         headers = ['Date', 'Time', 'Magnitude', 'Location']
         print '{:>15s} {:>15s} {:>15s} {:>15s}'.format(*headers)
         for detail in details:
-            print '{:>15s} {:>15s} {:>15s} {:>15s}'.format(detail['date'], detail['time'], detail['magnitude'], detail['location'])
+            fields = (detail['date'], detail['time'], detail['magnitude'], detail['location'])
+            print '{:>15s} {:>15s} {:>15s} {:>15s}'.format(*fields)
     else:
         print "Please check your internet connection."
 
