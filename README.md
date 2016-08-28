@@ -9,13 +9,11 @@ View the 5 recent **earthquakes** that took place in **Nepal** in your terminal.
      ```git clone https://github.com/studenton/QuakeCL```
 
 
-2. Open your file manager like Nemo or Nautilus with root access. 
-
-
-3. Copy the file earthquake from folder to the location */bin/* in your filesystem.
-
-
-4. Right click, and then in **Permissions** tab, tick *"Allow executing file as program"*. 
+2. Run the installation script inside QuakeCL folder.
+```shell
+chmod a+x install.sh
+sudo ./install.sh
+```
 
 ### USAGE:
     ~ $ earthquake 
