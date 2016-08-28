@@ -4,7 +4,6 @@
 '''
 from datetime import datetime
 now = datetime.now()
-print "Today's date: %s/%s/%s" % (now.year, now.month, now.day)
 
 
 def get_page(url):
@@ -16,5 +15,10 @@ def get_page(url):
 
 data = get_page('https://docs.google.com/spreadsheets/u/0/d/1eeIOB58Dn5qRNWTySqrL35U8xY3JjZ7yhg5Dpxvbz8s/export'
     '?format=csv&id=1eeIOB58Dn5qRNWTySqrL35U8xY3JjZ7yhg5Dpxvbz8s&gid=0')
-print "Recent Earthquakes:"
-print data[111:-1]
+
+if data:
+	print "Today's date: %s/%s/%s" % (now.year, now.month, now.day)
+	print "Recent Earthquakes:"
+	print data[111:-1]
+else:
+	print "Check your internet connection."
