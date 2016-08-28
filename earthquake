@@ -17,8 +17,9 @@ data = get_page('https://docs.google.com/spreadsheets/u/0/d/1eeIOB58Dn5qRNWTySqr
     '?format=csv&id=1eeIOB58Dn5qRNWTySqrL35U8xY3JjZ7yhg5Dpxvbz8s&gid=0')
 
 if data:
-	print "Today's date: %s/%s/%s" % (now.year, now.month, now.day)
-	print "Recent Earthquakes:"
-	print data[111:-1]
+    print "Today's date: %s/%s/%s" % (now.year, now.month, now.day)
+    print "Recent Earthquakes:"
+    result = data[112:-1]
+    print result.split('\n')
 else:
-	print "Check your internet connection."
+    print "Check your internet connection."
