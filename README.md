@@ -24,7 +24,7 @@ View the 5 recent **earthquakes** that took place in **Nepal** in your terminal.
 
 ### Stuff used to make this:
 
- * [Seismonepal](http://www.seismonepal.gov.np) as source of data.
- * Python for coding the script.
- * [Google Spreadsheet]() for the parsing of data.
+ * [Seismonepal](http://www.seismonepal.gov.np) for the data.
+ * Python magic.
+ * [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1eeIOB58Dn5qRNWTySqrL35U8xY3JjZ7yhg5Dpxvbz8s/edit) for scraping the data using importxml and xpath.
 
