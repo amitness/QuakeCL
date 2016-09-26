@@ -3,7 +3,7 @@
 Get details of recent earthquakes occurred in Nepal.
 Author: Amit Chaudhary
 '''
-from datetime import datetime, date
+from datetime import date
 
 sheet_id = '1eeIOB58Dn5qRNWTySqrL35U8xY3JjZ7yhg5Dpxvbz8s'
 sheet_url = 'https://docs.google.com/spreadsheets/u/0/d/{}/export?format=csv'
@@ -43,9 +43,8 @@ def main():
     if data:
         details = normalize(data)
         details = create_dictionary(details)
-        now = datetime.now()
-        print "Today's date: %s/%s/%s" % (now.year, now.month, now.day)
-        today = date(now.year, now.month, now.day)
+        today = date.today()
+        print "Today's date: %s" % (today)
         year, month, day = map(int, details[0]['date'].split('/'))
         last_quake = date(year, month, day)
         print 'Last Earthquake: {} ago'.format(today - last_quake)
