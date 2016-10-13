@@ -4,12 +4,12 @@ View the 5 recent **earthquakes** that took place in **Nepal** in your terminal.
 ![Screenshot](https://1.bp.blogspot.com/-VqSshLgpYUs/V8MZTsR7fPI/AAAAAAAACxc/_XiZkz2tlgsqjh0veID2elAYZWxzaAwxQCLcB/s1600/Screenshot%2Bfrom%2B2016-08-28%2B22%253A31%253A38.png)
 
 ### INSTALLATION:
-1. Clone the repository to your home folder.
+- Clone the repository to your home folder.
      
      ```git clone https://github.com/studenton/QuakeCL```
 
 
-2. Run the installation script inside QuakeCL folder.
+- Run the installation script inside QuakeCL folder.
 ```shell
 chmod a+x install.sh
 sudo ./install.sh
@@ -20,7 +20,7 @@ sudo ./install.sh
 
 
 
-### Stuff used to make this:
+### References
 
  * [Seismonepal](http://www.seismonepal.gov.np) for the data.
  * Python magic.
