@@ -47,7 +47,8 @@ def main():
         print "Today's date: {}".format(today)
         year, month, day = map(int, details[0]['date'].split('/'))
         last_quake = date(year, month, day)
-        print 'Last Earthquake: {} ago'.format(today - last_quake)
+        delta = (today - last_quake).days
+        print 'Last Earthquake: {} days ago'.format(delta)
         print
         headers = ['Date', 'Time', 'Magnitude', 'Location']
         print '{:>15s} {:>15s} {:>15s} {:>15s}'.format(*headers)
