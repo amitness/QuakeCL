@@ -44,7 +44,7 @@ def main():
         details = normalize(data)
         details = create_dictionary(details)
         today = date.today()
-        print "Today's date: %s" % (today)
+        print "Today's date: {}".format(today)
         year, month, day = map(int, details[0]['date'].split('/'))
         last_quake = date(year, month, day)
         print 'Last Earthquake: {} ago'.format(today - last_quake)
