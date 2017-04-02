@@ -5,8 +5,8 @@ Author: Amit Chaudhary
 '''
 from datetime import date
 
-sheet_id = '1eeIOB58Dn5qRNWTySqrL35U8xY3JjZ7yhg5Dpxvbz8s'
-sheet_url = 'https://docs.google.com/spreadsheets/u/0/d/{}/export?format=csv'
+SHEET_ID = '1eeIOB58Dn5qRNWTySqrL35U8xY3JjZ7yhg5Dpxvbz8s'
+SHEET_URL = 'https://docs.google.com/spreadsheets/u/0/d/{}/export?format=csv'
 
 
 def get_page(url):
@@ -17,45 +17,45 @@ def get_page(url):
         return ''
 
 
-def normalize(data):
-    details = data.split('\n')
-    details.pop(0)
-    details.pop(5)
-    details.pop(5)
-    details = map(lambda x: x.strip(',\r'), details)
-    return details
+def create_dictionary(data):
+    sheet = []
+    rows = data.splitlines()
+    for row in rows:
+        cells = row.split(',')
+        sheet.append({'date': convert_to_date(cells[0]),
+                       'time': cells[1],
+                       'magnitude': cells[2],
+                       'location': cells[3]})
+    return sort_by_date(sheet)
 
 
-def create_dictionary(datas):
-    result = []
-    for data in datas:
-        fields = data.split(',')
-        result.append({'date': fields[0],
-                       'time': fields[1],
-                       'magnitude': fields[4],
-                       'location': fields[6]})
-    return sorted(result, key=lambda r: r.get('date'), reverse=True)
+def sort_by_date(rows):
+    return sorted(rows, key=lambda row: row.get('date'), reverse=True)
+
+
+def convert_to_date(text):
+    '''Convert date in Y-M-D to date object.'''
+    year, month, day = map(int, text.split('-'))
+    return date(year, month, day)
 
 
 def main():
-    data = get_page(sheet_url.format(sheet_id))
-
+    data = get_page(SHEET_URL.format(SHEET_ID))
     if data:
-        details = normalize(data)
-        details = create_dictionary(details)
+        details = create_dictionary(data)
         today = date.today()
-        print "Today's date: {}".format(today)
-        year, month, day = map(int, details[0]['date'].split('/'))
-        last_quake = date(year, month, day)
+        print today.strftime('Today: %B %d, %Y')
+        last_quake = details[0]['date']
         delta = (today - last_quake).days
         print 'Last Earthquake: {} days ago'.format(delta)
         print
         headers = ['Date', 'Time', 'Magnitude', 'Location']
-        print '{:>15s} {:>15s} {:>15s} {:>15s}'.format(*headers)
+        row = '{:>15s} {:>15s} {:>15s} {:>15s}'
+        print row.format(*headers)
         for detail in details:
-            fields = (detail['date'], detail['time'],
+            fields = (detail['date'].strftime('%b %d, %Y'), detail['time'],
                       detail['magnitude'], detail['location'])
-            print '{:>15s} {:>15s} {:>15s} {:>15s}'.format(*fields)
+            print row.format(*fields)
     else:
         print "Please check your internet connection."
 
