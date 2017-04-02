@@ -23,9 +23,9 @@ def create_dictionary(data):
     for row in rows:
         cells = row.split(',')
         sheet.append({'date': convert_to_date(cells[0]),
-                       'time': cells[1],
-                       'magnitude': cells[2],
-                       'location': cells[3]})
+                      'time': cells[1],
+                      'magnitude': cells[2],
+                      'location': cells[3]})
     return sort_by_date(sheet)
 
 
