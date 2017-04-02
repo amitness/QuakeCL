@@ -57,7 +57,7 @@ def main():
                       detail['magnitude'], detail['location'])
             print row.format(*fields)
     else:
-        print "Please check your internet connection."
+        print 'Please check your internet connection.'
 
 if __name__ == '__main__':
     main()
