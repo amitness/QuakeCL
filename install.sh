@@ -1,4 +1,4 @@
-git clone http://github.com/studenton/QuakeCL.git --quiet
+git clone http://github.com/amitness/QuakeCL.git --quiet
 cp QuakeCL/earthquake.py /bin/earthquake
 chmod a+x /bin/earthquake
 echo "Installation complete."
