@@ -6,13 +6,13 @@ View the 5 recent **earthquakes** that took place in **Nepal** in your terminal.
 ### INSTALLATION:
 #### One Step Installation
 ```
-wget -q -O - https://raw.githubusercontent.com/studenton/QuakeCL/master/install.sh | sudo bash
+wget -q -O - https://raw.githubusercontent.com/amitness/QuakeCL/master/install.sh | sudo bash
 ```
 
 #### Manual Installation
 - Clone the repository
      
-     ```git clone https://github.com/studenton/QuakeCL```
+     ```git clone https://github.com/amitness/QuakeCL```
 
 - Run the installation script inside the cloned folder
      ```bash
