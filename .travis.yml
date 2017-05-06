@@ -5,3 +5,7 @@ python:
 
 script:
   - python earthquake.py
+  
+branches:
+  only:
+    - master
