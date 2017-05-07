@@ -14,7 +14,7 @@ def get_page(url):
         import urllib
         return urllib.urlopen(url).read()
     except:
-        return ''
+        return None
 
 
 def create_dictionary(data):
