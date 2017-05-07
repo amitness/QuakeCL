@@ -5,6 +5,7 @@ python:
 
 script:
   - python earthquake.py
+  - python test_earthquake.py
   
 branches:
   only:
