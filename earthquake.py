@@ -34,7 +34,7 @@ def sort_by_date(rows):
 
 
 def convert_to_date(text):
-    '''Convert date in Y-M-D to date object.'''
+    """Convert date in Y-M-D to date object."""
     year, month, day = map(int, text.split('-'))
     return date(year, month, day)
 
