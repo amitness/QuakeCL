@@ -1,9 +1,10 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 '''
 Get details of recent earthquakes occurred in Nepal.
 Author: Amit Chaudhary
 '''
 from datetime import date
+from urllib.request import urlopen
 
 SHEET_ID = '1eeIOB58Dn5qRNWTySqrL35U8xY3JjZ7yhg5Dpxvbz8s'
 SHEET_URL = 'https://docs.google.com/spreadsheets/u/0/d/{}/export?format=csv'
@@ -11,8 +12,7 @@ SHEET_URL = 'https://docs.google.com/spreadsheets/u/0/d/{}/export?format=csv'
 
 def get_page(url):
     try:
-        import urllib
-        return urllib.urlopen(url).read()
+        return urlopen(url).read().decode('utf-8')
     except:
         return None
 
@@ -44,20 +44,20 @@ def main():
     if data:
         details = create_dictionary(data)
         today = date.today()
-        print today.strftime('Today: %B %d, %Y')
+        print(today.strftime('Today: %B %d, %Y'))
         last_quake = details[0]['date']
         delta = (today - last_quake).days
-        print 'Last Earthquake: {} days ago'.format(delta)
+        print('Last Earthquake: {} days ago'.format(delta))
         print
         headers = ['Date', 'Time', 'Magnitude', 'Location']
         row = '{:>15s} {:>15s} {:>15s} {:>15s}'
-        print row.format(*headers)
+        print(row.format(*headers))
         for detail in details:
             fields = (detail['date'].strftime('%b %d, %Y'), detail['time'],
                       detail['magnitude'], detail['location'])
-            print row.format(*fields)
+            print(row.format(*fields))
     else:
-        print 'Please check your internet connection.'
+        print('Please check your internet connection.')
 
 if __name__ == '__main__':
     main()
