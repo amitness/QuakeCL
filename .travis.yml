@@ -3,10 +3,9 @@ language: python
 python:
   - "3.6"
 
-script:
-  - python earthquake.py
-  - python test_earthquake.py
-  
+install: pip install QuakeCL
+script: earthquake
+
 branches:
   only:
     - master
