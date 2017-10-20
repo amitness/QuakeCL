@@ -1,10 +1,8 @@
 from setuptools import setup
 
-requirements = [pkg.split('=')[0] for pkg in open('requirements.txt')]
-
 setup(
     name='QuakeCL',
-    version='0.1.9',
+    version='0.2.0',
     license='MIT',
     description='A command line tool that displays the recent earthquakes and aftershocks in Nepal.',
     long_description=open('README.md').read(),
@@ -16,8 +14,8 @@ setup(
     author='Amit Chaudhary',
     author_email='meamitkc@gmail.com',
     url='https://github.com/amitness/QuakeCL',
-    install_requires=requirements,
-    download_url='https://github.com/amitness/QuakeCL/tarball/0.1.9',
+    install_requires=['requests'],
+    download_url='https://github.com/amitness/QuakeCL/tarball/0.2.0',
     packages=['quakecl', ],
     test_suite='quakecl.tests',
     entry_points="""
