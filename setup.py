@@ -15,6 +15,7 @@ setup(
     author='Amit Chaudhary',
     author_email='meamitkc@gmail.com',
     url='https://github.com/amitness/QuakeCL',
+    download_url = 'https://github.com/amitness/QuakeCL/tarball/0.1.0',
     packages=['quakecl', ],
     test_suite='quakecl.tests',
     entry_points="""
