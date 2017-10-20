@@ -13,7 +13,7 @@ setup(
         "Programming Language :: Python :: 3",
     ],
     author='Amit Chaudhary',
-    author_email='',  # TO DO
+    author_email='meamitkc@gmail.com',
     url='https://github.com/amitness/QuakeCL',
     packages=['quakecl', ],
     test_suite='quakecl.tests',
