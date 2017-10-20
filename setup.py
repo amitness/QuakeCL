@@ -4,7 +4,7 @@ requirements = [pkg.split('=')[0] for pkg in open('requirements.txt')]
 
 setup(
     name='QuakeCL',
-    version='0.1.7',
+    version='0.1.8',
     license='MIT',
     description='A command line tool that displays the recent earthquakes and aftershocks in Nepal.',
     long_description=open('README.md').read(),
@@ -17,7 +17,7 @@ setup(
     author_email='meamitkc@gmail.com',
     url='https://github.com/amitness/QuakeCL',
     install_requires=requirements,
-    download_url='https://github.com/amitness/QuakeCL/tarball/0.1.7',
+    download_url='https://github.com/amitness/QuakeCL/tarball/0.1.8',
     packages=['quakecl', ],
     test_suite='quakecl.tests',
     entry_points="""
