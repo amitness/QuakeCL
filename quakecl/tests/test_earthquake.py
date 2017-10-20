@@ -1,6 +1,7 @@
 import unittest
-import earthquake
 from datetime import date
+
+from quakecl import earthquake
 
 
 class Tests(unittest.TestCase):
@@ -13,6 +14,7 @@ class Tests(unittest.TestCase):
     def test_get_page(self):
         result = earthquake.get_page('http://abcde.fghij')
         self.assertFalse(result)
+
 
 if __name__ == '__main__':
     unittest.main()

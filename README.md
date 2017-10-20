@@ -6,22 +6,30 @@ View the 5 recent **earthquakes** that took place in **Nepal** in your terminal.
 ### INSTALLATION:
 #### One Step Installation
 ```
-wget -q -O - https://raw.githubusercontent.com/amitness/QuakeCL/master/install.sh | sudo bash
+pip install QuakeCL
 ```
 
 #### Manual Installation
 - Clone the repository
-     
+
      ```git clone https://github.com/amitness/QuakeCL```
 
 - Run the installation script inside the cloned folder
+
      ```bash
-     chmod a+x install.sh
-     sudo ./install.sh
+         python setup.py install
      ```
-     
+
 ### USAGE:
-    ~ $ earthquake 
+    ~ $ earthquake
+
+### DEVELOPMENT
+
+To run the tests:
+
+```
+python setup.py test
+```
 
 ### Built with:
  * Python
