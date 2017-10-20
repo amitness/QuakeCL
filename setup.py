@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='QuakeCL',
-    version='0.1.dev0',
+    version='0.1.0',
     license='MIT',
     description='A command line tool that displays the recent earthquakes and aftershocks in Nepal.',
     long_description=open('README.md').read(),
