@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 '''
 Get details of recent earthquakes occurred in Nepal.
 Author: Amit Chaudhary
@@ -58,6 +57,7 @@ def main():
             print(row.format(*fields))
     else:
         print('Please check your internet connection.')
+
 
 if __name__ == '__main__':
     main()
