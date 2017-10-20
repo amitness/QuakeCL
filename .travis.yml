@@ -1,11 +1,16 @@
 language: python
-
 python:
-  - "3.6"
-
+- '3.6'
 install: pip install QuakeCL
 script: earthquake
-
 branches:
   only:
-    - master
+  - master
+deploy:
+  provider: pypi
+  user: "amitness"
+  password:
+    secure: C+jqUycg8uuUTaUGopL6wVpvFj9tt6L8BbJuErkZ0DRmPI1WWAw/rLgN0HQcxvzKhs+HQJVzNYlRaLXbLcf4qZzNYwOIu/C/czfGLwm4r2R7uYI1l1VKtL0f13RiOjuUgsZblaeerZfVT1C23Bl+x8XxPBu8om/URrhGR1HwLLbC8iw5U7QfdOImfvuOPaZ4KdB1yBoUQolmogo39/Tls7k0+tl4qbVbF733tVi6UnTKmGtGgn6CykR9qINu0VpVATiHSesuyhs7nMfyfGbNWlyKs+dv73ttda52xZBfZ96xaq87YwVuQkelm4b/acxwTbeUx9xKHz+W2g6yPhtSuZVvQe5qU4dAZ1lxLR2p9eO4oGyHGyFhB+tWZ3vqwAV3tnlwfXFEXh3bztRzObm8pZinPriImEXVm+QYQPW+3ET1g1ZI4/xW/IkDX5gPQ+Tf0zb6laTDKq34rtBMk1ZWdv5rReRUho1m8qKbgxnHC+pUhWeNr1RSgKrtZQHvP+GILtHZ5CUw1Hesk/7HrQFSM0Xd3zwOzdktZPVNL28+63PjVKpipmFh12RhHY7Q//7+gdXXBqq21P+E2otRpPbhS4j5GJhUJRgxBTCIs4J8uOme5gk/hvbu5Q4UKiBMzUjXz6XmMQheJVv0Ptl+vtwJk722t5FdRC1DcQSUkj0ggAA=
+   on:
+    tags: true
+    branch: master
