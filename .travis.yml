@@ -3,9 +3,6 @@ python:
 - '3.6'
 install: pip install QuakeCL
 script: earthquake
-branches:
-  only:
-  - master
 deploy:
   provider: pypi
   user: "amitness"
