@@ -16,7 +16,6 @@ setup(
     author='Amit Chaudhary',
     author_email='meamitkc@gmail.com',
     url='https://github.com/amitness/QuakeCL',
-    python_requires='>=3',
     install_requires=requirements,
     download_url='https://github.com/amitness/QuakeCL/tarball/0.1.7',
     packages=['quakecl', ],
