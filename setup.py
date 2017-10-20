@@ -1,5 +1,6 @@
 from setuptools import setup
 
+requirements = [pkg.split('=')[0] for pkg in open('requirements.txt')]
 
 setup(
     name='QuakeCL',
@@ -16,6 +17,7 @@ setup(
     author_email='meamitkc@gmail.com',
     url='https://github.com/amitness/QuakeCL',
     python_requires='>=3',
+    install_requires=requirements,
     download_url='https://github.com/amitness/QuakeCL/tarball/0.1.6',
     packages=['quakecl', ],
     test_suite='quakecl.tests',

@@ -3,7 +3,7 @@ Get details of recent earthquakes occurred in Nepal.
 Author: Amit Chaudhary
 '''
 from datetime import date
-from urllib.request import urlopen
+import requests
 
 SHEET_ID = '1eeIOB58Dn5qRNWTySqrL35U8xY3JjZ7yhg5Dpxvbz8s'
 SHEET_URL = 'https://docs.google.com/spreadsheets/u/0/d/{}/export?format=csv'
@@ -11,7 +11,7 @@ SHEET_URL = 'https://docs.google.com/spreadsheets/u/0/d/{}/export?format=csv'
 
 def get_page(url):
     try:
-        return urlopen(url).read().decode('utf-8')
+        return requests.get(url).content.decode('utf-8')
     except:
         return None
 
