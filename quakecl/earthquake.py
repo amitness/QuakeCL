@@ -47,7 +47,7 @@ def main():
         last_quake = details[0]['date']
         delta = (today - last_quake).days
         print('Last Earthquake: {} days ago'.format(delta))
-        print
+        print()
         headers = ['Date', 'Time', 'Magnitude', 'Location']
         row = '{:>15s} {:>15s} {:>15s} {:>15s}'
         print(row.format(*headers))
